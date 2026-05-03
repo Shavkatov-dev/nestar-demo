@@ -1,3 +1,8 @@
+import Advertisement from "@/libs/components/homePage/Advertisement";
+import PopularProperties from "@/libs/components/homePage/PopularProperties";
+import TopAgents from "@/libs/components/homePage/TopAgents";
+import TopProperties from "@/libs/components/homePage/TopProperties";
+import TrendProperties from "@/libs/components/homePage/TrendProperties";
 import withLayoutMain from "@/libs/components/layout/LayoutHome";
 import { Stack } from "@mui/material";
 import { NextPage } from "next";
@@ -6,21 +11,11 @@ const Home: NextPage = () => {
   return (
     <Stack>
       <Stack className="home-page ">
-        <Stack>
-          <Stack className="container">Trend Property</Stack>
-        </Stack>
-        <Stack>
-          <Stack className="container">Popular Properties</Stack>
-        </Stack>
-        <Stack>
-          <Stack className="container">Adertisemnt</Stack>
-        </Stack>
-        <Stack>
-          <Stack className="container">Top Properties</Stack>
-        </Stack>
-        <Stack>
-          <Stack className="container">Top Agents</Stack>
-        </Stack>
+        <TrendProperties />
+        <PopularProperties />
+        <Advertisement />
+        <TopProperties />
+        <TopAgents />
       </Stack>
     </Stack>
   );
